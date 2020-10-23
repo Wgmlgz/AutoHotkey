@@ -6,7 +6,18 @@ SendMode Input
 
 b::setName("redlay")
 n::setName("lay")
-m::setName("red")
+m::
+    CoordMode, mouse, Screen
+    MouseGetPos, xpos, ypos 
+    Send, {LButton up}
+    MouseClick, left, 1113, 87
+    Send, redf
+    Send, {Backspace}
+    Send, {Enter}
+    Send, {Enter}
+    MouseMove, xpos, ypos 
+return
+
 ,::setName("chick")
 
 Left::LButton
