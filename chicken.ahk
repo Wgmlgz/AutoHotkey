@@ -4,9 +4,9 @@ SendMode Input
 #UseHook On
 
 
-b::setName("redlay")
-n::setName("lay")
-m::
+n::setName("redlay")
+m::setName("lay")
+,::
     CoordMode, mouse, Screen
     MouseGetPos, xpos, ypos 
     Send, {LButton up}
@@ -18,7 +18,7 @@ m::
     MouseMove, xpos, ypos 
 return
 
-,::setName("chick")
+.::setName("chick")
 
 Left::LButton
 RButton::
@@ -30,7 +30,7 @@ f12::
     Suspend
 return
 
-.::
+b::
     CoordMode, mouse, Screen
     Send, ^a
     MouseGetPos, xpos, ypos
