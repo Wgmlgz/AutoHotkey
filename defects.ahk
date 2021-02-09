@@ -21,14 +21,20 @@ forward(){
     MouseClick, left, 210, 1024
     MouseMove, xpos, ypos
 }
+back(){
+    CoordMode, mouse, Screen
+    MouseGetPos, xpos, ypos
+    MouseClick, left, 150, 1024
+    MouseMove, xpos, ypos
+}
 
 #IfWinActive Neurospectr Object Markup
 
-n::setName("redlay")
+m::back()
 m::Delete
 
 
-.::setName("road")
+.::setName("defect")
 
 Down::LButton
 RButton::
@@ -46,7 +52,7 @@ return
 #IfWinActive Label for the rectangle
 
 ,::forward()
-m::setName("lay")
+m::back()
 b::
     CoordMode, mouse, Screen
     MouseGetPos, xpos, ypos 
@@ -59,7 +65,7 @@ b::
     MouseMove, xpos, ypos 
 return
 
-.::setName("road")
+.::setName("defect")
 
 Down::LButton
 RButton::
